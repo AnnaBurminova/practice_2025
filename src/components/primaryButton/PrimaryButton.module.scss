@@ -1,0 +1,47 @@
+@import "src/styles/variables";
+
+.button {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  min-height: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: #1a1a1a;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: $mobile-max-screen) {
+  .button {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    min-width: 80px;
+    min-height: 32px;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,78 @@
+@import "src/styles/variables";
+
+.about {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #4a4a4a;
+
+  &Description {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 700px;
+    white-space: normal;
+  }
+}
+
+.mapTitle {
+  font-size: clamp(20px, 2.5vw, 28px);
+  margin: 40px 0 24px;
+  text-align: center;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.mapWrapper {
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.map {
+  width: 100%;
+  height: 420px;
+  border: none;
+  display: block;
+}
+
+@media screen and (max-width: $mobile-max-screen) {
+  .about {
+    margin: 60px 15px;
+
+    &Description {
+      font-size: 16px;
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  .mapWrapper {
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+
+  .map {
+    height: 300px;
+  }
+
+  .mapTitle {
+    font-size: 20px;
+    margin: 32px 0 16px;
+  }
+}

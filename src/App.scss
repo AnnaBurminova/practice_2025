@@ -1,0 +1,32 @@
+@import "src/styles/variables";
+
+.App {
+  position: relative;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-layout {
+  padding: 74px 216px;
+  flex: 1;
+}
+
+.header {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding: 30px 20px 15px;
+}
+
+@media screen and (max-width: $mobile-max-screen) {
+  .app-layout {
+    padding: 55px 0;
+  }
+}

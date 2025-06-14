@@ -1,0 +1,17 @@
+@import "src/styles/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: $app-font-color;
+}

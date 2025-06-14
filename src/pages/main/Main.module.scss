@@ -1,0 +1,12 @@
+@import "src/styles/variables";
+
+.mainPage {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: $mobile-max-screen) {
+  .mainPage {
+    margin: 0 20px;
+  }
+}

@@ -1,0 +1,137 @@
+@import "src/styles/variables";
+
+$nav-font-weight: 500;
+
+.appHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-height: 60px;
+  width: auto;
+  height: auto;
+}
+
+.navMenu {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: $app-font-color;
+  text-decoration: none;
+  font-weight: $nav-font-weight;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.burger {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  cursor: pointer;
+  padding: 8px;
+
+  transition: 
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.12);
+    outline: none;
+
+    img {
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+    }
+  }
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: $mobile-max-screen) {
+  .appHeader {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    padding: 20px 0 30px;
+
+    .logoWrapper {
+      margin-bottom: 15px;
+    }
+
+    a {
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 30px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: $app-font-color;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .active {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
