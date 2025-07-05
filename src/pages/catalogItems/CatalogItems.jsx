@@ -71,10 +71,10 @@ export const CatalogItems = () => {
     <section>
       <Performance title="НАСЛАДИТЕСЬ НАШИМИ КРОССОВКАМИ" img={performanceSneaker} />
 
-      <ItemList title="НАШИ ТОВАРЫ">
+      <ItemList title="ПОКУПАЙ ПРЯМО СЕЙЧАС">
         {catalogItemsData.map(({ id, title, description, cost, img }) => (
           <ItemCard
-            key={id}
+            id={id}
             title={title}
             description={description}
             cost={cost}
@@ -86,7 +86,7 @@ export const CatalogItems = () => {
       <ItemList title="АКСЕССУАРЫ И УХОД">
         {accessoriesItemsData.map(({ id, title, description = "", cost, img }) => (
           <ItemCard
-            key={id}
+            id={id}
             title={title}
             description={description}
             cost={cost}

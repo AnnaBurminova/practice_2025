@@ -11,42 +11,42 @@ import cleanSpray from "./images/cleanSpray.jpg";
 
 const popularItemsData = [
   {
-    id: 1,
+    id: 17,
     title: "Модель Air Max 97",
     description: "Беговые кроссовки с технологией амортизации Air",
     cost: 415,
     img: sneaker1,
   },
   {
-    id: 2,
+    id: 18,
     title: "Модель Yeezy Boost 350",
     description: "Ультралегкие кроссовки с верхом из Primeknit",
     cost: 389,
     img: sneaker2,
   },
   {
-    id: 3,
+    id: 19,
     title: "JORDAN 1 RETRO",
     description: "Классика баскетбола, кожа премиум качества, оригинальная цветовая гамма",
     cost: 349,
     img: sneaker3,
   },
   {
-    id: 4,
+    id: 20,
     title: "ULTRABOOST 22",
     description: "Беговые кроссовки, энергоотдача Boost, адаптивная поддержка стопы",
     cost: 59,
     img: sneaker4,
   },
   {
-    id: 5,
+    id: 21,
     title: "CHUCK TAYLOR 70",
     description: "Винтажный дизайн, усиленная подошва, хлопковый канвас",
     cost: 35,
     img: sneaker5,
   },
   {
-    id: 6,
+    id: 22,
     title: "OLD SKOOL PRO",
     description: "Скейтбординг, усиленные зоны, подошва Vulcanized",
     cost: 45,
@@ -56,7 +56,7 @@ const popularItemsData = [
 
 const accessoriesItemsData = [
   {
-    id: 7,
+    id: 23,
     title: "ЗАЩИТНЫЙ СПРЕЙ",
     description: "Защита от воды и грязи, для всех типов материалов",
     cost: 15,
@@ -70,7 +70,7 @@ export const PopularItems = () => {
       <ItemList title="ЭТО ВЫБИРАЮТ ЧАЩЕ ВСЕГО">
         {popularItemsData.map(({ id, title, description, cost, img }) => (
           <ItemCard
-            key={id}
+            id={id}
             title={title}
             description={description}
             cost={cost}
@@ -82,7 +82,7 @@ export const PopularItems = () => {
       <ItemList title="АКСЕССУАРЫ И УХОД">
         {accessoriesItemsData.map(({ id, title, description, cost, img }) => (
           <ItemCard
-            key={id}
+            id={id}
             title={title}
             description={description}
             cost={cost}

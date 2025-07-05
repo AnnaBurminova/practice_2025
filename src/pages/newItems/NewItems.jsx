@@ -13,56 +13,56 @@ import laces from "./images/laces.jpg";
 
 const newItemsData = [
   {
-    id: 1,
+    id: 8,
     title: "NIKE AIR MAX",
     description: "Легендарная амортизация Air",
     cost: 12999,
     img: sneaker1,
   },
   {
-    id: 2,
+    id: 9,
     title: "ADIDAS ULTRA BOOST",
     description: "Технология Boost для максимальной энергии",
     cost: 9999,
     img: sneaker2,
   },
   {
-    id: 3,
+    id: 10,
     title: "NEW BALANCE 574",
     description: "Классический силуэт, комфорт на весь день",
     cost: 8900,
     img: sneaker3,
   },
   {
-    id: 4,
+    id: 11,
     title: "PUMA RS-X",
     description: "Смелый дизайн и современные технологии",
     cost: 9900,
     img: sneaker4,
   },
   {
-    id: 5,
+    id: 12,
     title: "JORDAN 1 RETRO",
     description: "Культовая баскетбольная модель",
     cost: 15900,
     img: sneaker5,
   },
   {
-    id: 6,
+    id: 13,
     title: "VANS OLD SKOOL",
     description: "Легендарные скейтерские кроссовки",
     cost: 6900,
     img: sneaker6,
   },
   {
-    id: 7,
+    id: 14,
     title: "VANS OLD SKOOL",
     description: "Легендарные скейтерские кроссовки",
     cost: 6900,
     img: sneaker7,
   },
   {
-    id: 8,
+    id: 15,
     title: "VANS OLD SKOOL",
     description: "Легендарные скейтерские кроссовки",
     cost: 6900,
@@ -72,7 +72,7 @@ const newItemsData = [
 
 const accessoriesItemsData = [
   {
-    id: 9,
+    id: 16,
     title: "ШНУРКИ СВЕТЯЩИЕСЯ",
     cost: 1200,
     img: laces,
@@ -86,7 +86,7 @@ export const NewItems = () => {
       <ItemList title="НОВИНКИ СЕЗОНА">
         {newItemsData.map(({ id, title, description, cost, img }) => (
           <ItemCard
-            key={id}
+            id={id}
             title={title}
             description={description}
             cost={cost}
@@ -98,7 +98,7 @@ export const NewItems = () => {
       <ItemList title="АКСЕССУАРЫ И УХОД">
         {accessoriesItemsData.map(({ id, title, description = "", cost, img }) => (
           <ItemCard
-            key={id}
+            id={id}
             title={title}
             description={description}
             cost={cost}

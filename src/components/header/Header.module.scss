@@ -90,6 +90,36 @@ $nav-font-weight: 500;
   display: none;
 }
 
+.cartLinkWrapper {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+}
+
+.cartCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  font-size: 1.08em;
+  font-weight: 600;
+  background: #ffe600;
+  color: #333300;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(255, 234, 0, 0.18);
+  position: relative;
+  right: -2px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  letter-spacing: 0.01em;
+  font-family: inherit;
+  user-select: none;
+  line-height: 1;
+  z-index: 1;
+}
+
 @media screen and (max-width: $mobile-max-screen) {
   .appHeader {
     display: none;
